@@ -51,7 +51,7 @@ const Navbar = () => {
                   <Link
                   onClick={handleMenu}
                     to={item.path}
-                    className="font-bold text-4xl text-purple-200"
+                    className="font-extrabold text-4xl text-purple-200"
                   >
                     {item.title}
                   </Link>
@@ -68,19 +68,29 @@ const Navbar = () => {
       )}
 
       <div
-        className="w-full flex items-center gap-9 p-5 shadow-md"
-        style={{
-          backgroundColor: "#390050",
-        }}
+        className="w-full flex items-center gap-9 p-5 shadow-md bg-purple-950 md:bg-transparent md:shadow-none md:relative"
       >
         <div className="text-white text-2xl">
-          <button onClick={handleMenu}>
+          <button onClick={handleMenu} className="md:hidden">
             <IoIosMenu />
           </button>
         </div>
+        <div className="md:flex md:items-center md:absolute md:w-full md:justify-between md:left-0 md:right-0 md:top-0 md:px-7 md:h-full md:bg-black md:py-9">
+
+
         <Link to="/">
-          <img src={logo} alt="logo" className="w-52" />
+          <img src={logo} alt="logo" className="w-52  " />
         </Link>
+        <ul className="items- justify-end hidden md:flex md:gap-8 text-xl">
+          {menuItems.map((item,i)=>(
+            
+          <li key={i}><Link to={item.path} className="text-white">
+            {item.title}
+          </Link></li>
+          ))
+          }
+        </ul>
+        </div>
       </div>
     </>
   );

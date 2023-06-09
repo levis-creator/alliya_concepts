@@ -1,7 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import Form from "../components/Form";
 
 const ContactUs = () => {
   return (
+    <>
+    <Helmet>
+      <title>
+        Contact us
+      </title>
+    </Helmet>
     <div className="w-full  min-h-screen space-y-5  text-white ">
       <div className="  p-4 bg-black text-white py-14">
         <h3 className="font-bold text-3xl py-10">
@@ -12,6 +19,7 @@ const ContactUs = () => {
 
       </div>
     </div>
+    </>
   );
 };
 
