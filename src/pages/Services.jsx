@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import TextCarousel from "../components/TextCarousel";
 import ProjectCarousel from "../components/ProjectCarousel";
 import Footer from "../components/Footer";

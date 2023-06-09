@@ -1,6 +1,4 @@
-import Underdevelopment from "../components/Underdevelopment";
 import img from "../assets/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg";
-import Services from "./Services";
 import TextCarousel from "../components/TextCarousel";
 import ProjectCarousel from "../components/ProjectCarousel";
 import Footer from "../components/Footer";
