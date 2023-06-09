@@ -12,15 +12,18 @@ function App() {
     <>
       <HelmetProvider>
         <Helmet>
-
-        <html lang="en"/>
-        <title>Alliya Concepts</title>
-        <meta
-        name="description"
-        content="Best digital marketing and web development company based in kenya"/>
+          <html lang="en" />
+          <title>Alliya Concepts</title>
+          <meta
+            name="description"
+            content="Best digital marketing and web development company based in kenya"
+          />
+          <meta
+            name="msvalidate.01"
+            content="363219A2A5399D412E31D4ECF7AB915C"
+          />
         </Helmet>
 
-        
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
