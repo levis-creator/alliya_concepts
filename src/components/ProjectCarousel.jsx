@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide,} from "swiper/react";
 import { Autoplay} from 'swiper';
-import img from "../assets/project2.png";
+import img from "../assets/smartmockups_lipxksdq.jpg";
 import img2 from "../assets/Screenshot 2023-06-09 at 17-49-46 Levis Nyingi.png";
 //swiper css
 import "swiper/css";

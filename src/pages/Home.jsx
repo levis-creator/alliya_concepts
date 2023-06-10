@@ -9,11 +9,11 @@ const Home = () => {
    
     <div className="w-full p-7 min-h-screen relative md:px-0">
       <div className="w-full md:max-h-screen relative">
-        <div className="md:absolute md:z-50">
+        <div className="md:absolute md:z-50 md:bottom-1/2">
 
         <TextCarousel />
         </div>
-        <div className=" w-full  project md:h-screen ">
+        <div className=" w-full  project md:h-screen md:relative">
           <ProjectCarousel />
         </div>
       </div>
