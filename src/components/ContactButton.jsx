@@ -1,18 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const ContactButton = () => {
   return (
-    <div>
-      <h5 className="font-bold text-2xl">
-          We want to work with you
-        </h5>
-        <Link to="/contact-us">
-          <button className="w-full bg-purple-800 text-white py-4 text-xl ">
-            Let's Talk
-          </button>
-        </Link>
-    </div>
-  )
-}
+    <div className="md:p-7">
+      <p className="text-4xl font-black leading-relaxed w-3/4">
+        Our office is based in Kenya and Our Services are available world wide.{" "}
+      </p>
 
-export default ContactButton
+      <Link to="/contact-us">
+        <button
+          className="text-xl bg-purple-700 text-white px-20 py-4 w-full mt-10 md:w-44 md:text-3xl font-semibold
+           md:px-0 md:mt-4"
+        >
+          Let's Talk
+        </button>
+      </Link>
+    </div>
+  );
+};
+
+export default ContactButton;

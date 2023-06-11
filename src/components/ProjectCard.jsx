@@ -1,16 +1,14 @@
-import img from "../assets/Screenshot 2023-06-09 at 17-49-46 Levis Nyingi.png"
+import img from "../assets/smartmockups_lipxksdq.jpg";
 
 const ProjectCard = () => {
   return (
-    <div className="shadow-md p-3 rounded-xl border md:absolute">
-    <div>
-      <img src={img} alt="project name" />
+    <div className="md:relative">
+      <div className="md:h-80">
+        <img src={img} alt="project name" className="md:h-full object-cover" />
       </div>
-    name of the project
-  </div>
-  
+      <div className="md:absolute md:z-50 md:bottom-5 md:left-5 md:text-white md:text-2xl md:font-bold">name of the project</div>
+    </div>
+  );
+};
 
-  )
-}
-
-export default ProjectCard
+export default ProjectCard;
