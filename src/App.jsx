@@ -14,10 +14,6 @@ function App() {
         <Helmet>
           <html lang="en" />
           <title>Alliya Concepts</title>
-          <meta
-            name="description"
-            content="Best digital marketing and web development company based in kenya"
-          />
         </Helmet>
 
         <Navbar />
