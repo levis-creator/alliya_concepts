@@ -9,6 +9,8 @@ import "swiper/css/pagination";
 
 const ProjectCarousel = () => {
   return (
+    <div className="px-7 md:px-0 md:h-full">
+
     <Swiper
     modules={[Autoplay]}
     className="mySwiper h-1/3 md:h-full"
@@ -20,10 +22,11 @@ const ProjectCarousel = () => {
     pagination={{
       clickable: true,
     }}
+    
   >
     <SwiperSlide className="bg-rose-500">
       <div className="w-full h-full relative">
-        <img src={img} alt="project " className="h-full object-cover" />
+        <img src={img} alt="project " className="h-full w-full object-cover" />
         <div className="absolute bottom-0 right-0 mx-2">
           description
         </div>
@@ -39,6 +42,7 @@ const ProjectCarousel = () => {
     </SwiperSlide>
 
   </Swiper>
+    </div>
   )
 }
 

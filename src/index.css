@@ -18,14 +18,15 @@ body {
 .text-carousel .swiper-slide {
   padding-top: 5px;
   height: fit-content !important;
-  color: #a6a4a5;
-}
-.text-carousel .swiper-slide-next {
-  color: #646162;
+  color: rgba(0,0,0,1);
 }
 .text-carousel .swiper-slide-active {
-  color: rgba(3, 7, 18, 1);
+  color: rgba(0, 0, 0, 0.7);
 }
+.text-carousel .swiper-slide-next {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .project .swiper-pagination {
   bottom: 0px;
   text-align: left;
@@ -35,22 +36,20 @@ textarea {
   resize: none;
 }
 @media (min-width: 768px) {
-  .text-carousel .swiper-slide-active {
-    color:rgba(255, 255, 255, 0.7)!important;
-  }
   .text-carousel .swiper {
-    height: 160px;
-
+    height: 198px;
   }
   .text-carousel .swiper-slide {
     height: % !important;
-    padding-block:2px;
+    padding-block: 2px;
     color: white;
   }
   .text-carousel .swiper-wrapper {
-
+  }
+  .text-carousel .swiper-slide-active {
+    color: rgba(255, 255, 255, 0.9) !important;
   }
   .text-carousel .swiper-slide-next {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
   }
 }

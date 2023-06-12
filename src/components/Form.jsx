@@ -36,7 +36,7 @@ const Form = () => {
         rows={5}
       />
     </div>
-    <button className="bg-purple-700 w-fit px-6 py-3">
+    <button className="bg-purple-700 w-fit px-6 py-3 text-white" >
       Send Message
     </button>
   </div>

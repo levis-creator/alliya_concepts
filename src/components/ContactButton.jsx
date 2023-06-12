@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ContactButton = () => {
   return (
-    <div className="md:p-7">
+    <div className="p-7">
       <p className="text-4xl font-black leading-relaxed w-3/4">
         Our office is based in Kenya and Our Services are available world wide.{" "}
       </p>

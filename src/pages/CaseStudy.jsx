@@ -8,18 +8,21 @@ const CaseStudy = () => {
       <Helmet>
         <title>Case study</title>
       </Helmet>
-      <div className="w-full px-5 pt-5 md:px-0">
-        <h3 className="text-2xl font-bold">All Projects</h3>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-0">
+      <div className="w-full pt-5 md:pt-16">
+        <div className="p-7 md:w-5/6 ">
+          <h3 className="text-2xl font-bold lg:text-3xl">All Projects</h3>
+          <p className="text-2xl lg:text-3xl">This are some of the projects and samples we've completed</p>
+        </div>
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-0 px-7 md:px-0 md:w-full">
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
         </div>
-        <div className="md:p-7">
+        <div className="">
           <ContactButton />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

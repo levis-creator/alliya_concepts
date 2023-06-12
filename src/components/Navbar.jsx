@@ -5,7 +5,6 @@ import { TfiClose } from "react-icons/tfi";
 import { useState } from "react";
 const Navbar = () => {
   const menuItems = [
-    { id: 1, title: "Home", path: "/" },
     {
       id: 2,
       title: "Case Studies",
@@ -20,6 +19,11 @@ const Navbar = () => {
       id: 4,
       title: "Services",
       path: "/services",
+    },
+    {
+      id: 5,
+      title: "Contact",
+      path: "/contact-us",
     },
   ];
   const [openMenu, setOpenMenu] = useState(false);
