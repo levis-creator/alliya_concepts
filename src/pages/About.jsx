@@ -5,20 +5,24 @@ import Carousel from "../components/Carousel";
 import ImageComponent from "../components/ImageComponent";
 import img2 from "../assets/altumcode-duEioBAh53s-unsplash.jpg";
 import usePagesHook from "../hook/usePagesHook";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FETCHABOUT } from "../constants/constants";
 import { client } from "../../contentful/setup";
 
 const About = () => {
   const { about, dispatch } = usePagesHook();
+  const [image, setImage]=useState()
   useEffect(() => {
     const fetchAbout = async () => {
       try {
         const response = await client.getEntries({
           content_type: "aboutPage",
-        });
+        }).then((data)=>{
 
-        dispatch({ type: FETCHABOUT, payload: response.items[0].fields });
+          dispatch({ type: FETCHABOUT, payload: data.items[0].fields });
+          setImage(data.items[0].fields .aboutTeamImage.fields.file.url)
+        })
+
       } catch (error) {
         console.log(error);
       }
@@ -37,11 +41,11 @@ const About = () => {
           </h3>
           <div className=" overflow-hidden md:relative">
             <div className="hidden md:block md:absolute md:bg-black top-0 bottom-0 right-0 left-0 z-30 md:bg-opacity-50"></div>
-            <img src={about.aboutTeamImage.fields.file.url} className="h-96 w-full object-cover" />
+            <img src={image} className="h-96 w-full object-cover" />
           </div>
         </div>
         <div className="md:flex">
-          <div className="flex flex-col gap-7 p-7 ">
+          <div className="flex flex-col gap-7 p-7 flex-1">
             <p className="text-2xl text-justify leading-relaxed md:text-3xl lg:w-5/6">
               {about.companyDescription}
             </p>
