@@ -31,7 +31,7 @@ const ProjectCarousel = () => {
     <div className="px-7 md:px-0 md:h-full">
       <Swiper
         modules={[Autoplay]}
-        className="mySwiper h-1/3 md:h-full"
+        className="mySwiper h-1/3 md:h-full bg-black"
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
