@@ -41,7 +41,6 @@ const ProjectCarousel = () => {
           clickable: true,
         }}
       >
-        {console.log(projects)}
         {
           projects.map((items)=>(
             <SwiperSlide key={items.sys.id}>
