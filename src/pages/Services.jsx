@@ -1,37 +1,34 @@
 import Footer from "../components/Footer";
 import ContactButton from "../components/ContactButton";
 import { Helmet } from "react-helmet-async";
-import img from "../assets/markus-spiske-1LLh8k2_YFk-unsplash.jpg";
-import img2 from "../assets/tom-podmore-TwEhgfCWISA-unsplash.jpg";
 import Carousel from "../components/Carousel";
-import ImageComponent from "../components/ImageComponent";
-import img3 from "../assets/altumcode-duEioBAh53s-unsplash.jpg";
 import ApproachSteps from "../components/ApproachSteps";
+import { useEffect, useState } from "react";
+import { FETCHSERVICES } from "../constants/constants";
+import { client } from "../../contentful/setup";
+import usePagesHook from "../hook/usePagesHook";
 const Services = () => {
-  const services = [
-    {
-      title: "Web & app Development",
-      steps: {
-        step1:
-          "Get in touch for your new website, custom web application, mobile app, or staffing.",
-        step2: "We work to understand your needs and scope your project.",
-        step3:
-          "Kickoff the project with a technical brief, assign resources, and start coding.",
-      },
-      image: img,
-    },
-    {
-      title: "Design & digital marketing",
-      steps: {
-        step1:
-          "Get in touch for your new website, custom web application, mobile app, or staffing.",
-        step2: "Contact us to discuss your brief and see examples.",
-        step3:
-          "Kickoff the design effort with strategic calls to finalize the brief and start designing.",
-      },
-      image: img3,
-    },
-  ];
+  const { service, dispatch } = usePagesHook();
+  const [steps, setSteps]=useState([])
+  const [bgImage, setBgImage]=useState()
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const response = await client.getEntries({
+          content_type: "servicesPage",
+        }).then((data)=>{
+          dispatch({ type: FETCHSERVICES, payload: data.items[0].fields});
+          setBgImage(data.items[0].fields.approachBackground.fields.file.url)
+          setSteps(data.items[0].fields.services)
+        })
+        return response
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchService();
+  }, [dispatch]);
+
   return (
     <>
       <Helmet>
@@ -44,9 +41,7 @@ const Services = () => {
         <h2 className="font-bold text-3xl px-7 md:text-6xl"> Our services</h2>
         <p className="text-2xl leading-relaxed p-7">
           {" "}
-          Alliya Concepts is web development company that is focused in being
-          your technical partner as you scale an giving your company the best
-          user experience while making you company more visible.{" "}
+          {service.servicesDescription}
         </p>
         </div>
         </div>
@@ -55,7 +50,7 @@ const Services = () => {
           <div className="w-full h-full absolute -z-50">
             <div className="relative w-full h-full">
               <div className="absolute bg-black top-0 bottom-0 right-0 left-0 bg-opacity-60"></div>
-              <img src={img2} alt="" className="w-full h-full object-cover " />
+              <img src={bgImage} alt="" className="w-full h-full object-cover " />
             </div>
           </div>
           <h3 className="font-bold text-3xl text-white my-10 p-7 ">
@@ -64,8 +59,8 @@ const Services = () => {
         </div>
 
         <div className=" bg-slate-50 md:px-0">
-          {services.map((item, i)=>(
-            <ApproachSteps key={i} data={item}/>
+          {steps.map((item, i)=>(
+            <ApproachSteps key={i} data={item.fields}/>
           ))}
         </div>
         <div className="space-y-4">

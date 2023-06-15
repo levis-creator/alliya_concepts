@@ -16,14 +16,14 @@ function App() {
           <title>Alliya Concepts</title>
         </Helmet>
 
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/case-study" element={<CaseStudy />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/case-study" element={<CaseStudy />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
       </HelmetProvider>
     </>
   );

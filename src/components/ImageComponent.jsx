@@ -1,6 +1,6 @@
 const ImageComponent = ({img}) => {
   return (
-    <div className="md:max-h-max w-full bg-black md:w-2/5 p-0">
+    <div className="md:max-h-max w-full bg-black md:w-2/6 p-0">
       <div
         className=" h-80 relative   md:h-full md:overflow-auto w-full">
         <div
