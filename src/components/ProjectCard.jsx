@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import img from "../assets/smartmockups_lipxksdq.jpg";
 
 const ProjectCard = ({ data }) => {
   const [image, setImage]=useState()

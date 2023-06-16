@@ -4,7 +4,7 @@ import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { client } from "../../contentful/setup";
 import ProjectSlide from "./ProjectSlide";
 import usePagesHook from "../hook/usePagesHook";

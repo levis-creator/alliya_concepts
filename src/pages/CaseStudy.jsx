@@ -3,8 +3,6 @@ import ProjectCard from "../components/ProjectCard";
 import ContactButton from "../components/ContactButton";
 import Footer from "../components/Footer";
 import usePagesHook from "../hook/usePagesHook";
-import { useEffect, useState } from "react";
-import { FETCHPROJECTS } from "../constants/constants";
 import Carousel from "../components/Carousel";
 const CaseStudy = () => {
   const {projects,}=usePagesHook()

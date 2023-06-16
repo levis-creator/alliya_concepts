@@ -22,7 +22,7 @@ const About = () => {
           dispatch({ type: FETCHABOUT, payload: data.items[0].fields });
           setImage(data.items[0].fields .aboutTeamImage.fields.file.url)
         })
-
+        return response
       } catch (error) {
         console.log(error);
       }
