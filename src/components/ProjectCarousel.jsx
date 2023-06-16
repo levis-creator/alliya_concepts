@@ -7,9 +7,11 @@ import "swiper/css/pagination";
 import { useEffect, useState } from "react";
 import { client } from "../../contentful/setup";
 import ProjectSlide from "./ProjectSlide";
+import usePagesHook from "../hook/usePagesHook";
+import { FETCHPROJECTS } from "../constants/constants";
 
 const ProjectCarousel = () => {
-  const [projects, setProjects] = useState([]);
+  const { projects, dispatch } = usePagesHook();
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -18,7 +20,7 @@ const ProjectCarousel = () => {
             content_type: "projects",
           })
           .then((data) => {
-            setProjects(data.items);
+            dispatch({type: FETCHPROJECTS, payload:data.items})
           });
         return respond;
       } catch (error) {
@@ -41,13 +43,11 @@ const ProjectCarousel = () => {
           clickable: true,
         }}
       >
-        {
-          projects.map((items)=>(
-            <SwiperSlide key={items.sys.id}>
-            <ProjectSlide  data={items.fields}/>
-            </SwiperSlide>
-          ))
-        }
+        {projects.map((items) => (
+          <SwiperSlide key={items.sys.id}>
+            <ProjectSlide data={items.fields} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

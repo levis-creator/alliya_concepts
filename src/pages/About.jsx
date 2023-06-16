@@ -34,7 +34,7 @@ const About = () => {
       <Helmet>
         <title>About</title>
       </Helmet>
-      <div className="flex flex-col md:pt-16">
+      <div className="flex flex-col ">
         <div className="px-7 md:relative md:px-0">
           <h3 className="font-bold text-3xl md:text-6xl md:absolute md:z-50 md:text-white md:bottom-12 md:left-7">
             About us

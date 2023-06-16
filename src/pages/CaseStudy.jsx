@@ -2,7 +2,12 @@ import { Helmet } from "react-helmet-async";
 import ProjectCard from "../components/ProjectCard";
 import ContactButton from "../components/ContactButton";
 import Footer from "../components/Footer";
+import usePagesHook from "../hook/usePagesHook";
+import { useEffect, useState } from "react";
+import { FETCHPROJECTS } from "../constants/constants";
+import Carousel from "../components/Carousel";
 const CaseStudy = () => {
+  const {projects,}=usePagesHook()
   return (
     <>
       <Helmet>
@@ -14,12 +19,14 @@ const CaseStudy = () => {
           <p className="text-2xl lg:text-3xl">This are some of the projects and samples we've completed</p>
         </div>
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-0 px-7 md:px-0 md:w-full">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.map((items)=>(
+          <ProjectCard key={items.sys.id} data={items.fields}/>
+          ))}
         </div>
         <div className="">
+          <div className="hidden">
+            <Carousel/>
+          </div>
           <ContactButton />
         </div>
         <Footer />

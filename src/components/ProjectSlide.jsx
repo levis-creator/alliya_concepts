@@ -14,7 +14,7 @@ const ProjectSlide = ({ data }) => {
           alt="project "
           className="h-full w-full object-cover"
         />
-        <div className="absolute bottom-0 right-0 mx-2 text-white text-xl font-medium">
+        <div className="absolute bottom-0 right-0 mx-2 text-white text-xl font-medium capitalize">
           {data.projectName}
         </div>
       </div>

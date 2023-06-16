@@ -70,6 +70,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      <div className="fixed w-full h-fit z-50">
 
       <div
         className="w-full flex items-center gap-9 p-5 shadow-md bg-purple-950 md:bg-transparent md:shadow-none md:relative"
@@ -95,6 +96,7 @@ const Navbar = () => {
           }
         </ul>
         </div>
+      </div>
       </div>
     </>
   );
