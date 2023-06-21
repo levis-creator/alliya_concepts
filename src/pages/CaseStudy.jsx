@@ -11,7 +11,7 @@ const CaseStudy = () => {
       <Helmet>
         <title>Case study</title>
       </Helmet>
-      <div className="w-full pt-5 md:pt-16">
+      <div className="w-full pt-20 md:pt-16">
         <div className="p-7 md:w-5/6 ">
           <h3 className="text-2xl font-bold lg:text-3xl">All Projects</h3>
           <p className="text-2xl lg:text-3xl">This are some of the projects and samples we've completed</p>

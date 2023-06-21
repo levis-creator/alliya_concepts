@@ -34,14 +34,14 @@ const About = () => {
       <Helmet>
         <title>About</title>
       </Helmet>
-      <div className="flex flex-col ">
+      <div className="flex flex-col pt-20 md:pt-0">
         <div className="px-7 md:relative md:px-0">
           <h3 className="font-bold text-3xl md:text-6xl md:absolute md:z-50 md:text-white md:bottom-12 md:left-7">
             About us
           </h3>
           <div className=" overflow-hidden md:relative">
             <div className="hidden md:block md:absolute md:bg-black top-0 bottom-0 right-0 left-0 z-30 md:bg-opacity-50"></div>
-            <img src={image} className="h-96 w-full object-cover" />
+            <img src={image} className="h-60 md:h-96 w-full object-cover" />
           </div>
         </div>
         <div className="md:flex">

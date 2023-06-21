@@ -6,7 +6,7 @@ import Carousel from "../components/Carousel";
 const Home = () => {
   return (
     <>
-      <div className="w-full pt-7 min-h-screen relative md:px-0">
+      <div className="w-full pt-20 min-h-screen relative md:px-0 md:pt-0">
         <Carousel />
         <div className="space-y-5 leading-relaxed pt-8 px-7 md:w-5/6">
           <h2 className=" text-3xl font-bold lg:text-6xl">

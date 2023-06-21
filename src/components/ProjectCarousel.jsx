@@ -28,7 +28,7 @@ const ProjectCarousel = () => {
       }
     };
     fetchProjects();
-  }, []);
+  }, [dispatch]);
   return (
     <div className="px-7 md:px-0 md:h-full">
       <Swiper

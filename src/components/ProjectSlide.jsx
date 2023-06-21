@@ -5,7 +5,7 @@ const ProjectSlide = ({ data }) => {
 
   useEffect(() => {
     setImage(data.projectImage.fields.file.url);
-  }, [data]);
+  }, [data, setImage]);
   return (
     <a href={data.projectLink}>
       <div className="w-full h-full relative">

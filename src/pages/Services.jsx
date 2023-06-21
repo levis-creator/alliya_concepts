@@ -34,17 +34,17 @@ const Services = () => {
       <Helmet>
         <title>Services</title>
       </Helmet>
-      <div className="w-full  min-h-screen pt-10">
-        <div className="md:h-screen md:relative ">
+      <div className="w-full  min-h-screen pt-20 md:pt-0">
+        <section className="md:h-screen md:relative md:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <div className="md:w-3/6 md:absolute md:bottom-16">
 
-        <h2 className="font-bold text-3xl px-7 md:text-6xl"> Our services</h2>
-        <p className="text-2xl leading-relaxed p-7">
+        <h2 className="font-bold text-3xl px-7 md:text-6xl md:text-white"> Our services</h2>
+        <p className="text-2xl leading-relaxed p-7 md:text-white">
           {" "}
           {service.servicesDescription}
         </p>
         </div>
-        </div>
+        </section>
         {/* approach */}
         <div className="h-60 w-full relative flex items-end">
           <div className="w-full h-full absolute -z-50">

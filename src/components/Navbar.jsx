@@ -1,6 +1,6 @@
 import { IoIosMenu } from "react-icons/io";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TfiClose } from "react-icons/tfi";
 import { useState } from "react";
 const Navbar = () => {
@@ -27,6 +27,7 @@ const Navbar = () => {
     },
   ];
   const [openMenu, setOpenMenu] = useState(false);
+  const navigate=useNavigate()
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -83,9 +84,12 @@ const Navbar = () => {
         <div className="md:flex md:items-center md:absolute md:w-full md:justify-between md:left-0 md:right-0 md:top-0 md:px-7 md:h-full md:bg-black md:py-9">
 
 
-        <Link to="/">
+        <button onClick={()=>{
+          navigate("/")
+          setOpenMenu(false)
+        }} >
           <img src={logo} alt="logo" className="w-52  " />
-        </Link>
+        </button>
         <ul className="items- justify-end hidden md:flex md:gap-8 text-xl">
           {menuItems.map((item,i)=>(
             
