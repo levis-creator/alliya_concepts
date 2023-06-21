@@ -36,7 +36,7 @@ const About = () => {
       </Helmet>
       <div className="flex flex-col pt-20 md:pt-0">
         <div className="px-7 md:relative md:px-0">
-          <h3 className="font-bold text-3xl md:text-6xl md:absolute md:z-50 md:text-white md:bottom-12 md:left-7">
+          <h3 className="font-bold text-3xl md:text-6xl md:absolute md:z-40 md:text-white md:bottom-12 md:left-7">
             About us
           </h3>
           <div className=" overflow-hidden md:relative">
