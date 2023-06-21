@@ -26,7 +26,7 @@ const TextCarousel = () => {
         className="mySwiper">
         {items.map((item, i) => (
           <SwiperSlide
-            className=" text-3xl font-extrabold md:text-6xl md:text-white"
+            className=" text-3xl font-extrabold md:text-6xl md:text-white "
             key={i}>
             {item}
           </SwiperSlide>
